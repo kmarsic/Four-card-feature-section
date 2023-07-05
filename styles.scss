@@ -1,0 +1,115 @@
+@import "base/fonts/fonts.scss";
+@import "base/colors/colors.scss";
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(base/images/3860709.jpg) ;
+    font-family: 'poppins', sans-serif;
+    font-size: 15px;
+    margin:0;
+}
+
+.container {
+    background-color: white;
+    width:100%;
+    height:100%;
+}
+
+header {
+    text-align: center;
+    width: 28rem;
+    margin:auto;
+    p:first-child {
+        font-size:1.875rem;
+        margin-bottom:0;
+    }
+
+    p {
+        opacity: 0.7;
+    }
+
+    h1 {
+        margin-top:0;
+    }
+}
+
+.grid {
+    display:grid;
+    place-items: center;
+    padding: 2rem 0;
+}
+
+.grid-item {
+    width:300px;
+    border-radius:0.25rem;
+    margin: 1rem;
+    padding: 0.5rem 1rem;
+    box-shadow: 7px 6px 24px 0px rgba(0,0,0,0.3);
+    img {
+        float:right;  
+    }
+
+    &:nth-child(1) {
+        border-top: 3px solid;
+        border-color: $Cyan;
+        
+    }
+
+    &:nth-child(2) {
+        border-top: 3px solid;
+        border-color: $Red;
+    }
+
+    &:nth-child(3) {
+        border-top: 3px solid;
+        border-color: $Orange;
+    }
+
+    &:nth-child(4) {
+        border-top: 3px solid;
+        border-color: $Blue;
+    }
+}
+
+@media  (min-width:900px) {
+
+    body {
+        display:flex;
+        align-items: center;
+        height:100vh;
+    }
+    .container {
+        width:85%;
+        min-width:880px;
+        max-width: 1600px;
+        min-height:750px;
+        height: 90%;
+        margin:auto;
+        box-shadow: 0 0 15px #333;
+      }
+
+    .grid {
+        justify-content: center;
+        grid-template-columns: minmax(250px,400px) minmax(250px,400px) minmax(250px,400px);
+
+        .grid-item {
+            width: 80%;
+            
+            &:nth-child(1) {
+                transform: translate(40px, 118px);
+            }
+            
+            &:nth-child(3) {
+                grid-column: -3/-2;    
+            }
+
+            &:nth-child(4) {
+                transform:translate(-40px,-118px);
+            }
+        }
+    }
+}
