@@ -7,7 +7,6 @@
 }
 
 body {
-    background-image: url(base/images/3860709.jpg) ;
     font-family: 'poppins', sans-serif;
     font-size: 15px;
     margin:0;
@@ -50,7 +49,7 @@ header {
     padding: 0.5rem 1rem;
     box-shadow: 7px 6px 24px 0px rgba(0,0,0,0.3);
     img {
-        float:right;  
+        float: right;  
     }
 
     &:nth-child(1) {
@@ -81,6 +80,7 @@ header {
         display:flex;
         align-items: center;
         height:100vh;
+        background-image: url(base/images/3860709.jpg) ;   
     }
     .container {
         width:85%;
